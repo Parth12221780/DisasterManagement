@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div th:replace="fragments :: navbar"></div>
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to the Disaster Management System</h1>
+            <p>Your one-stop solution for disaster reporting and response coordination.</p>
+            <a href="/report" class="button">Report a Disaster</a>
+        </div>
+    </header>
+    <main>
+        <section class="features-section">
+            <h2>Our Features</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <img src="https://picsum.photos/id/1015/300/200" alt="Report a Disaster">
+                    <h3>Report a Disaster</h3>
+                    <p>Quickly report any disaster with location and details to alert authorities.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://picsum.photos/id/1025/300/200" alt="Find Hospitals">
+                    <h3>Find Nearby Hospitals</h3>
+                    <p>Locate nearby hospitals with information on bed availability.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://picsum.photos/id/10/300/200" alt="Get Alerts">
+                    <h3>Get Real-time Alerts</h3>
+                    <p>Stay informed with real-time alerts and updates on disasters in your area.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Disaster</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div th:replace="fragments :: navbar"></div>
+    <header>
+        <h1>Report a Disaster</h1>
+    </header>
+    <main>
+        <form action="/report" method="post" class="report-form">
+            <div class="form-group">
+                <label for="disaster-type">Type of Disaster</label>
+                <input type="text" id="disaster-type" name="disasterType" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button">Submit Report</button>
+        </form>
+    </main>
+</body>
+
+</html>

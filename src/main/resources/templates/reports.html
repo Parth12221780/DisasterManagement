@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Reports</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div th:replace="fragments :: navbar"></div>
+    <header>
+        <h1>Disaster Reports</h1>
+    </header>
+    <main>
+        <div class="reports-container">
+            <table class="reports-table">
+                <thead>
+                    <tr>
+                        <th>Disaster Type</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="report : ${reports}">
+                        <td th:text="${report.disasterType}"></td>
+                        <td th:text="${report.location}"></td>
+                        <td th:text="${report.description}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
